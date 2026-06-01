@@ -1,6 +1,10 @@
 {
   "item.bymasikolmod.quest_book" : "Quest Book",
+  "item.bymasikolmod.raw_mithril" : "Raw Mithril",
+  "item.bymasikolmod.mithril_ingot" : "Mithril Ingot",
 
-  "block.bymasikolmod.mithril_ore" : "Mithril ore",
-  "block.bymasikolmod.mithril_block" : "Mithril block"
+  "block.bymasikolmod.mithril_ore" : "Mithril Ore",
+  "block.bymasikolmod.mithril_block" : "Mithril Block",
+
+  "creativetab.bymasikolmod.masikol_items": "Masikol Items"
 }

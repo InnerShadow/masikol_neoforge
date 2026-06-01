@@ -12,6 +12,12 @@ public class ModItems {
     public static final DeferredItem<Item> QuestBook = ITEMS.register("quest_book",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> RawMithril = ITEMS.register("raw_mithril",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> MithrilIngot = ITEMS.register("mithril_ingot",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
