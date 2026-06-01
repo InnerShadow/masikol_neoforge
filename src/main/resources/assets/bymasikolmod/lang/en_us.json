@@ -1,3 +1,6 @@
 {
-  "item.bymasikolmod.quest_book" : "Quest Book"
+  "item.bymasikolmod.quest_book" : "Quest Book",
+
+  "block.bymasikolmod.mithril_ore" : "Mithril ore",
+  "block.bymasikolmod.mithril_block" : "Mithril block"
 }

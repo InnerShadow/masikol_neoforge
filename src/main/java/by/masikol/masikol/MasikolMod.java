@@ -1,5 +1,6 @@
 package by.masikol.masikol;
 
+import by.masikol.masikol.block.ModBlocks;
 import by.masikol.masikol.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -29,6 +30,7 @@ public class MasikolMod{
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -41,6 +43,11 @@ public class MasikolMod{
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
             event.accept(ModItems.QuestBook);
+        }
+
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
+            event.accept(ModBlocks.MITHRIL_ORE);
+            event.accept(ModBlocks.MITHRIL_BLOCK);
         }
     }
 

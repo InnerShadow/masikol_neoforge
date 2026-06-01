@@ -1,0 +1,7 @@
+{
+  "variants" : {
+    "" : {
+      "model" : "bymasikolmod:block/mithril_block"
+    }
+  }
+}
