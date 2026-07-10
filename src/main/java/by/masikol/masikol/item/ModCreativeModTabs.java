@@ -23,6 +23,8 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.QuestBook.get());
                         output.accept(ModItems.RawMithril.get());
                         output.accept(ModItems.MithrilIngot.get());
+                        output.accept(ModItems.ToxicRawMeat.get());
+                        output.accept(ModItems.ToxicCookedMeat.get());
 
                         output.accept(ModBlocks.MITHRIL_BLOCK.get());
                         output.accept(ModBlocks.MITHRIL_ORE.get());

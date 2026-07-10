@@ -1,6 +1,7 @@
 package by.masikol.masikol;
 
 import by.masikol.masikol.block.ModBlocks;
+import by.masikol.masikol.event.ModToolRules;
 import by.masikol.masikol.item.ModCreativeModTabs;
 import by.masikol.masikol.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -27,6 +28,7 @@ public class MasikolMod{
 
     public MasikolMod(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(ModToolRules::onModifyDefaultComponents);
 
         NeoForge.EVENT_BUS.register(this);
 

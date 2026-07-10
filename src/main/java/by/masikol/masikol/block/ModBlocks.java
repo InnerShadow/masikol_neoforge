@@ -22,11 +22,12 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> MITHRIL_ORE = registerBlock(
             "mithril_ore",
-            () -> new DropExperienceBlock(UniformInt.of(4, 8),
+            () -> new DropExperienceBlock(
+                    UniformInt.of(4, 8),
                     BlockBehaviour.Properties.of()
                             .strength(4.0F)
                             .requiresCorrectToolForDrops()
-                            .sound(SoundType.STONE)
+                            .sound(SoundType.DEEPSLATE)
             )
     );
 

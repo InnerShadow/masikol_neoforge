@@ -2,6 +2,8 @@
   "item.bymasikolmod.quest_book" : "Quest Book",
   "item.bymasikolmod.raw_mithril" : "Raw Mithril",
   "item.bymasikolmod.mithril_ingot" : "Mithril Ingot",
+  "item.bymasikolmod.toxic_raw_meat" : "Toxic Raw Meat",
+  "item.bymasikolmod.toxic_cooked_meat" : "Toxic Cooked Meat",
 
   "block.bymasikolmod.mithril_ore" : "Mithril Ore",
   "block.bymasikolmod.mithril_block" : "Mithril Block",
