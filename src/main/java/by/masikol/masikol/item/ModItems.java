@@ -39,6 +39,9 @@ public class ModItems {
                             .build()
             )));
 
+    public static final DeferredItem<Item> Peat = ITEMS.register("peat",
+            () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

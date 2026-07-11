@@ -1,0 +1,13 @@
+{
+  "values": {
+    "bymasikolmod:peat_ore": {
+      "burn_time": 900
+    },
+    "bymasikolmod:peat": {
+      "burn_time": 2000
+    },
+    "bymasikolmod:peat_block": {
+      "burn_time": 20000
+    }
+  }
+}

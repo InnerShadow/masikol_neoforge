@@ -25,9 +25,12 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.MithrilIngot.get());
                         output.accept(ModItems.ToxicRawMeat.get());
                         output.accept(ModItems.ToxicCookedMeat.get());
+                        output.accept(ModItems.Peat.get());
 
                         output.accept(ModBlocks.MITHRIL_BLOCK.get());
                         output.accept(ModBlocks.MITHRIL_ORE.get());
+                        output.accept(ModBlocks.PEAT_BLOCK.get());
+                        output.accept(ModBlocks.PEAT_ORE.get());
                     })
                     .build()
     );

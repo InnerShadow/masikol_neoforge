@@ -4,9 +4,12 @@
   "item.bymasikolmod.mithril_ingot" : "Mithril Ingot",
   "item.bymasikolmod.toxic_raw_meat" : "Toxic Raw Meat",
   "item.bymasikolmod.toxic_cooked_meat" : "Toxic Cooked Meat",
+  "item.bymasikolmod.peat" : "Peat",
 
   "block.bymasikolmod.mithril_ore" : "Mithril Ore",
   "block.bymasikolmod.mithril_block" : "Mithril Block",
+  "block.bymasikolmod.peat_ore" : "Peat Ore",
+  "block.bymasikolmod.peat_block" : "Peat Block",
 
   "creativetab.bymasikolmod.masikol_items": "Masikol Items"
 }

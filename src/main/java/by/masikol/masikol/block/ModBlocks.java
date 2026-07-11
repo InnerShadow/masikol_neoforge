@@ -41,6 +41,27 @@ public class ModBlocks {
             )
     );
 
+    public static final DeferredBlock<Block> PEAT_ORE = registerBlock(
+            "peat_ore",
+            () -> new DropExperienceBlock(
+                    UniformInt.of(0, 2),
+                    BlockBehaviour.Properties.of()
+                            .strength(3.0F, 3.0F)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.STONE)
+            )
+    );
+
+    public static final DeferredBlock<Block> PEAT_BLOCK = registerBlock(
+            "peat_block",
+            () -> new Block(
+                    BlockBehaviour.Properties.of()
+                            .strength(5.0F, 6.0F)
+                            .requiresCorrectToolForDrops()
+                            .sound(SoundType.STONE)
+            )
+    );
+
     private static <T extends Block> DeferredBlock<T> registerBlock(
             String name,
             Supplier<T> blockSupplier

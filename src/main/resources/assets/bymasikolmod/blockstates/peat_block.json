@@ -1,0 +1,7 @@
+{
+  "variants" : {
+    "" : {
+      "model" : "bymasikolmod:block/peat_block"
+    }
+  }
+}

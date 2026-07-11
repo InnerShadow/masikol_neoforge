@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "peat",
+  "ingredients": [
+    {
+      "item": "bymasikolmod:peat_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "bymasikolmod:peat"
+  }
+}
