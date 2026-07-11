@@ -3,7 +3,9 @@ package by.masikol.masikol;
 import by.masikol.masikol.block.ModBlocks;
 import by.masikol.masikol.event.ModToolRules;
 import by.masikol.masikol.item.ModCreativeModTabs;
-import by.masikol.masikol.item.ModItems;
+import by.masikol.masikol.item.ModFoodItems;
+import by.masikol.masikol.item.ModMaterialItems;
+import by.masikol.masikol.item.ModMiscItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -34,7 +36,9 @@ public class MasikolMod{
 
         ModCreativeModTabs.register(modEventBus);
 
-        ModItems.register(modEventBus);
+        ModMiscItems.register(modEventBus);
+        ModMaterialItems.register(modEventBus);
+        ModFoodItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
@@ -47,7 +51,7 @@ public class MasikolMod{
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 //        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
-//            event.accept(ModItems.QuestBook);
+//            event.accept(ModMiscItems.QuestBook);
 //        }
 //
 //        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){

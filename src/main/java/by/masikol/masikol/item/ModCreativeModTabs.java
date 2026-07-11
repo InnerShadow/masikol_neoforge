@@ -17,15 +17,15 @@ public class ModCreativeModTabs {
 
     public static final Supplier<CreativeModeTab> MASIKOL_ITEMS_TAB = CREATIVE_MOD_TAB.register(
             "masikol_items_tab", () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.QuestBook.get()))
+                    .icon(() -> new ItemStack(ModMiscItems.QuestBook.get()))
                     .title(Component.translatable("creativetab.bymasikolmod.masikol_items"))
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.QuestBook.get());
-                        output.accept(ModItems.RawMithril.get());
-                        output.accept(ModItems.MithrilIngot.get());
-                        output.accept(ModItems.ToxicRawMeat.get());
-                        output.accept(ModItems.ToxicCookedMeat.get());
-                        output.accept(ModItems.Peat.get());
+                        output.accept(ModMiscItems.QuestBook.get());
+                        output.accept(ModMaterialItems.RawMithril.get());
+                        output.accept(ModMaterialItems.MithrilIngot.get());
+                        output.accept(ModFoodItems.ToxicRawMeat.get());
+                        output.accept(ModFoodItems.ToxicCookedMeat.get());
+                        output.accept(ModMaterialItems.Peat.get());
 
                         output.accept(ModBlocks.MITHRIL_BLOCK.get());
                         output.accept(ModBlocks.MITHRIL_ORE.get());

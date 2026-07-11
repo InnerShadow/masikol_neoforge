@@ -1,7 +1,6 @@
 package by.masikol.masikol.block;
 
 import by.masikol.masikol.MasikolMod;
-import by.masikol.masikol.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -19,6 +18,9 @@ public class ModBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(MasikolMod.MOD_ID);
+
+    private static final DeferredRegister.Items BLOCK_ITEMS =
+            DeferredRegister.createItems(MasikolMod.MOD_ID);
 
     public static final DeferredBlock<Block> MITHRIL_ORE = registerBlock(
             "mithril_ore",
@@ -75,7 +77,7 @@ public class ModBlocks {
             String name,
             DeferredBlock<T> block
     ) {
-        ModItems.ITEMS.register(
+        BLOCK_ITEMS.register(
                 name,
                 () -> new BlockItem(block.get(), new Item.Properties())
         );
@@ -83,5 +85,6 @@ public class ModBlocks {
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
+        BLOCK_ITEMS.register(eventBus);
     }
 }
