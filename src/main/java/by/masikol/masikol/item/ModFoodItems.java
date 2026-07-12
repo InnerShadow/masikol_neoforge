@@ -1,34 +1,49 @@
 package by.masikol.masikol.item;
 
 import by.masikol.masikol.MasikolMod;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.component.ItemLore;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.List;
 
 public class ModFoodItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(MasikolMod.MOD_ID);
 
     public static final DeferredItem<Item> ToxicRawMeat = ITEMS.register("toxic_raw_meat",
-            () -> new Item(new Item.Properties().food(
-                    new FoodProperties.Builder()
-                            .nutrition(4)
-                            .saturationModifier(0.3F)
-                            .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 0.75F)
-                            .build()
-            )));
+            () -> new Item(new Item.Properties()
+                    .food(
+                            new FoodProperties.Builder()
+                                    .nutrition(4)
+                                    .saturationModifier(0.3F)
+                                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 0.75F)
+                                    .build()
+                    )
+                    .component(DataComponents.LORE, new ItemLore(List.of(
+                            Component.translatable("item.bymasikolmod.toxic_raw_meat.tooltip")
+                    )))
+            ));
 
     public static final DeferredItem<Item> ToxicCookedMeat = ITEMS.register("toxic_cooked_meat",
-            () -> new Item(new Item.Properties().food(
-                    new FoodProperties.Builder()
-                            .nutrition(6)
-                            .saturationModifier(0.8F)
-                            .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 0.05F)
-                            .build()
-            )));
+            () -> new Item(new Item.Properties()
+                    .food(
+                            new FoodProperties.Builder()
+                                    .nutrition(6)
+                                    .saturationModifier(0.8F)
+                                    .effect(() -> new MobEffectInstance(MobEffects.POISON, 200, 0), 0.05F)
+                                    .build()
+                    )
+                    .component(DataComponents.LORE, new ItemLore(List.of(
+                            Component.translatable("item.bymasikolmod.toxic_cooked_meat.tooltip")
+                    )))
+            ));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

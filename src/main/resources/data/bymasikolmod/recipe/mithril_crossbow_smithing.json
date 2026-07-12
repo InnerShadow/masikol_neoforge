@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "bymasikolmod:mithril_upgrade"
+  },
+  "base": {
+    "item": "minecraft:crossbow"
+  },
+  "addition": {
+    "item": "bymasikolmod:mithril_ingot"
+  },
+  "result": {
+    "count": 1,
+    "id": "bymasikolmod:mithril_crossbow"
+  }
+}

@@ -1,11 +1,17 @@
 package by.masikol.masikol;
 
 import by.masikol.masikol.block.ModBlocks;
+import by.masikol.masikol.event.MithrilArmorEffects;
 import by.masikol.masikol.event.ModToolRules;
+import by.masikol.masikol.item.ModArmorItems;
+import by.masikol.masikol.item.ModArmorMaterials;
 import by.masikol.masikol.item.ModCreativeModTabs;
 import by.masikol.masikol.item.ModFoodItems;
 import by.masikol.masikol.item.ModMaterialItems;
 import by.masikol.masikol.item.ModMiscItems;
+import by.masikol.masikol.item.ModSmithingTemplates;
+import by.masikol.masikol.item.ModToolItems;
+import by.masikol.masikol.item.ModWeaponItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -33,12 +39,18 @@ public class MasikolMod{
         modEventBus.addListener(ModToolRules::onModifyDefaultComponents);
 
         NeoForge.EVENT_BUS.register(this);
+        NeoForge.EVENT_BUS.addListener(MithrilArmorEffects::onLivingDamagePre);
 
         ModCreativeModTabs.register(modEventBus);
 
         ModMiscItems.register(modEventBus);
         ModMaterialItems.register(modEventBus);
         ModFoodItems.register(modEventBus);
+        ModArmorMaterials.register(modEventBus);
+        ModArmorItems.register(modEventBus);
+        ModToolItems.register(modEventBus);
+        ModWeaponItems.register(modEventBus);
+        ModSmithingTemplates.register(modEventBus);
         ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);

@@ -22,12 +22,13 @@ public class ModBlocks {
     private static final DeferredRegister.Items BLOCK_ITEMS =
             DeferredRegister.createItems(MasikolMod.MOD_ID);
 
+    // 1200.0F blast resistance matches obsidian - mithril is meant to survive explosions untouched.
     public static final DeferredBlock<Block> MITHRIL_ORE = registerBlock(
             "mithril_ore",
             () -> new DropExperienceBlock(
                     UniformInt.of(4, 8),
                     BlockBehaviour.Properties.of()
-                            .strength(4.0F)
+                            .strength(4.0F, 1200.0F)
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.DEEPSLATE)
             )
@@ -37,7 +38,7 @@ public class ModBlocks {
             "mithril_block",
             () -> new Block(
                     BlockBehaviour.Properties.of()
-                            .strength(4.0F)
+                            .strength(4.0F, 1200.0F)
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.STONE)
             )

@@ -1,0 +1,6 @@
+{
+  "parent": "bymasikolmod:item/mithril_bow",
+  "textures": {
+    "layer0": "bymasikolmod:item/mithril_bow_pulling_0"
+  }
+}

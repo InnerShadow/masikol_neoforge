@@ -1,12 +1,16 @@
 package by.masikol.masikol;
 
+import by.masikol.masikol.client.MithrilArmorHud;
+import by.masikol.masikol.client.ModItemProperties;
 import net.minecraft.client.Minecraft;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterGuiLayersEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
@@ -27,5 +31,15 @@ public class MasikolModClient {
         // Some client setup code
         MasikolMod.LOGGER.info("HELLO FROM CLIENT SETUP");
         MasikolMod.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+
+        event.enqueueWork(ModItemProperties::register);
+    }
+
+    @SubscribeEvent
+    static void onRegisterGuiLayers(RegisterGuiLayersEvent event) {
+        event.registerAboveAll(
+                ResourceLocation.fromNamespaceAndPath(MasikolMod.MOD_ID, "mithril_armor_bar"),
+                MithrilArmorHud::render
+        );
     }
 }

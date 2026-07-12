@@ -27,6 +27,21 @@ public class ModCreativeModTabs {
                         output.accept(ModFoodItems.ToxicCookedMeat.get());
                         output.accept(ModMaterialItems.Peat.get());
 
+                        output.accept(ModArmorItems.MithrilHelmet.get());
+                        output.accept(ModArmorItems.MithrilChestplate.get());
+                        output.accept(ModArmorItems.MithrilLeggings.get());
+                        output.accept(ModArmorItems.MithrilBoots.get());
+
+                        output.accept(ModToolItems.MithrilPickaxe.get());
+                        output.accept(ModToolItems.MithrilAxe.get());
+                        output.accept(ModToolItems.MithrilShovel.get());
+                        output.accept(ModToolItems.MithrilHoe.get());
+                        output.accept(ModToolItems.MithrilSword.get());
+
+                        output.accept(ModSmithingTemplates.MithrilUpgrade.get());
+                        output.accept(ModWeaponItems.MithrilBow.get());
+                        output.accept(ModWeaponItems.MithrilCrossbow.get());
+
                         output.accept(ModBlocks.MITHRIL_BLOCK.get());
                         output.accept(ModBlocks.MITHRIL_ORE.get());
                         output.accept(ModBlocks.PEAT_BLOCK.get());
