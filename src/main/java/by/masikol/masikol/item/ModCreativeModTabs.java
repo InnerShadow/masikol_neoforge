@@ -42,6 +42,20 @@ public class ModCreativeModTabs {
                         output.accept(ModWeaponItems.MithrilBow.get());
                         output.accept(ModWeaponItems.MithrilCrossbow.get());
 
+                        output.accept(ModAccessoryItems.CommonDamageModifier.get());
+                        output.accept(ModAccessoryItems.RareDamageModifier.get());
+                        output.accept(ModAccessoryItems.EpicDamageModifier.get());
+                        output.accept(ModAccessoryItems.LegendaryDamageModifier.get());
+                        output.accept(ModAccessoryItems.CommonGuaranteedDamageModifier.get());
+                        output.accept(ModAccessoryItems.RareGuaranteedDamageModifier.get());
+                        output.accept(ModAccessoryItems.EpicGuaranteedDamageModifier.get());
+                        output.accept(ModAccessoryItems.LegendaryGuaranteedDamageModifier.get());
+                        output.accept(ModAccessoryItems.CommonRandomDamageModifier.get());
+                        output.accept(ModAccessoryItems.RareRandomDamageModifier.get());
+                        output.accept(ModAccessoryItems.EpicRandomDamageModifier.get());
+                        output.accept(ModAccessoryItems.LegendaryRandomDamageModifier.get());
+                        output.accept(ModAccessoryItems.EnderDragonGift.get());
+
                         output.accept(ModBlocks.MITHRIL_BLOCK.get());
                         output.accept(ModBlocks.MITHRIL_ORE.get());
                         output.accept(ModBlocks.PEAT_BLOCK.get());

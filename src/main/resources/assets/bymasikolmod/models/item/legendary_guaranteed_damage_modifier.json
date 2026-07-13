@@ -1,0 +1,6 @@
+{
+  "parent" : "minecraft:item/generated",
+  "textures" : {
+    "layer0" : "bymasikolmod:item/legendary_guaranteed_damage_modifier"
+  }
+}

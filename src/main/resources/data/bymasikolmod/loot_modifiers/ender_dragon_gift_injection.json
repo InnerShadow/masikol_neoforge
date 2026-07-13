@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_table",
+  "table": "bymasikolmod:injects/ender_dragon_gift",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:entities/ender_dragon"
+    }
+  ]
+}
