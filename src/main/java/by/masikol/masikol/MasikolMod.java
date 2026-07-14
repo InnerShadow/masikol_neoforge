@@ -1,9 +1,12 @@
 package by.masikol.masikol;
 
 import by.masikol.masikol.block.ModBlocks;
+import by.masikol.masikol.event.BossProgressionEvents;
 import by.masikol.masikol.event.DamageModifierEffects;
 import by.masikol.masikol.event.MithrilArmorEffects;
 import by.masikol.masikol.event.ModToolRules;
+import by.masikol.masikol.event.ProgressionMobEquipment;
+import by.masikol.masikol.event.RandomAccessoryExplosionImmunity;
 import by.masikol.masikol.inventory.ModAttachments;
 import by.masikol.masikol.inventory.ModMenuTypes;
 import by.masikol.masikol.item.ModAccessoryItems;
@@ -17,6 +20,7 @@ import by.masikol.masikol.item.ModSmithingTemplates;
 import by.masikol.masikol.item.ModToolItems;
 import by.masikol.masikol.item.ModWeaponItems;
 import by.masikol.masikol.network.ModNetworking;
+import by.masikol.masikol.progression.ModProgressionAttachments;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -47,6 +51,10 @@ public class MasikolMod{
         NeoForge.EVENT_BUS.register(this);
         NeoForge.EVENT_BUS.addListener(MithrilArmorEffects::onLivingDamagePre);
         NeoForge.EVENT_BUS.addListener(DamageModifierEffects::onIncomingDamage);
+        NeoForge.EVENT_BUS.addListener(RandomAccessoryExplosionImmunity::onInvulnerabilityCheck);
+        NeoForge.EVENT_BUS.addListener(BossProgressionEvents::onLivingDeath);
+        NeoForge.EVENT_BUS.addListener(ProgressionMobEquipment::onEntityJoinLevel);
+        NeoForge.EVENT_BUS.addListener(ProgressionMobEquipment::onFinalizeSpawn);
 
         ModCreativeModTabs.register(modEventBus);
 
@@ -60,6 +68,7 @@ public class MasikolMod{
         ModSmithingTemplates.register(modEventBus);
         ModAccessoryItems.register(modEventBus);
         ModAttachments.register(modEventBus);
+        ModProgressionAttachments.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModBlocks.register(modEventBus);
 

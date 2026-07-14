@@ -66,6 +66,15 @@ public class ModAccessoryItems {
     public static final DeferredItem<RandomDamageModifierItem> LegendaryRandomDamageModifier = ITEMS.register("legendary_random_damage_modifier",
             () -> new RandomDamageModifierItem(randomItemProperties("legendary_random_damage_modifier", 1.0F, 2.0F), 1.0F, 2.0F, LEGENDARY_COLOR));
 
+    public static final DeferredItem<RandomAccessoryItem> RandomAccessory = ITEMS.register("random_accessory",
+            () -> new RandomAccessoryItem(new Item.Properties()
+                    .stacksTo(16)
+                    .rarity(net.minecraft.world.item.Rarity.RARE)
+                    .component(DataComponents.LORE, new ItemLore(List.of(
+                            Component.translatable("item.bymasikolmod.random_accessory.tooltip")
+                    )))
+            ));
+
     private static Item.Properties itemProperties(String name, float procChance) {
         return new Item.Properties()
                 .stacksTo(1)

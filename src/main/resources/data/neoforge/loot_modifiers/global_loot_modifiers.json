@@ -2,6 +2,8 @@
   "replace": false,
   "entries": [
     "bymasikolmod:mithril_upgrade_injection",
-    "bymasikolmod:ender_dragon_gift_injection"
+    "bymasikolmod:ender_dragon_gift_injection",
+    "bymasikolmod:random_accessory_boss_injection",
+    "bymasikolmod:random_accessory_chest_injection"
   ]
 }

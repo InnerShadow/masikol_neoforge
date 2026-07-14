@@ -54,6 +54,7 @@ public class ModCreativeModTabs {
                         output.accept(ModAccessoryItems.RareRandomDamageModifier.get());
                         output.accept(ModAccessoryItems.EpicRandomDamageModifier.get());
                         output.accept(ModAccessoryItems.LegendaryRandomDamageModifier.get());
+                        output.accept(ModAccessoryItems.RandomAccessory.get());
                         output.accept(ModAccessoryItems.EnderDragonGift.get());
 
                         output.accept(ModBlocks.MITHRIL_BLOCK.get());

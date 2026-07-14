@@ -30,6 +30,10 @@
   "item.bymasikolmod.rare_random_damage_modifier" : "Rare Random Damage Modifier",
   "item.bymasikolmod.epic_random_damage_modifier" : "Epic Random Damage Modifier",
   "item.bymasikolmod.legendary_random_damage_modifier" : "Legendary Random Damage Modifier",
+  "item.bymasikolmod.random_accessory" : "Random Accessory",
+
+  "item.bymasikolmod.random_accessory.tooltip" : "Use to obtain a random accessory",
+  "item.bymasikolmod.random_accessory.used" : "You received: %s",
 
   "item.bymasikolmod.common_damage_modifier.tooltip" : "%s%% chance to deal +%s damage on hit",
   "item.bymasikolmod.rare_damage_modifier.tooltip" : "%s%% chance to deal +%s damage on hit",
@@ -68,5 +72,9 @@
   "block.bymasikolmod.peat_ore" : "Peat Ore",
   "block.bymasikolmod.peat_block" : "Peat Block",
 
-  "creativetab.bymasikolmod.masikol_items": "Masikol Items"
+  "creativetab.bymasikolmod.masikol_items": "Masikol Items",
+
+  "progression.bymasikolmod.tier1" : "A dark power stirs... zombies and skeletons have begun arming themselves.",
+  "progression.bymasikolmod.tier2" : "The Warden and the Wither have both fallen - zombies and skeletons now march fully armored.",
+  "progression.bymasikolmod.tier3" : "With the Ender Dragon slain, some of those armored foes may now carry mithril."
 }

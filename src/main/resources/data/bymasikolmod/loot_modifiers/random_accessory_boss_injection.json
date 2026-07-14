@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_table",
+  "table": "bymasikolmod:injects/random_accessory_boss",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        { "condition": "neoforge:loot_table_id", "loot_table_id": "minecraft:entities/wither" },
+        { "condition": "neoforge:loot_table_id", "loot_table_id": "minecraft:entities/warden" },
+        { "condition": "neoforge:loot_table_id", "loot_table_id": "minecraft:entities/ender_dragon" }
+      ]
+    }
+  ]
+}
